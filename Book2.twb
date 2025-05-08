@@ -1,0 +1,548 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='combined_metrics' inline='true' name='federated.0f3niba1lrys951h1j3hh020pvuv' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='combined_metrics' name='textscan.0mfe4l004lyfl314w13rb1oodm5m'>
+            <connection class='textscan' directory='/Users/admin/Downloads/project/PROJECT-5/Project Vanguard' filename='combined_metrics.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0mfe4l004lyfl314w13rb1oodm5m' name='combined_metrics.csv' table='[combined_metrics#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+            <column datatype='string' name='Metric' ordinal='0' />
+            <column datatype='real' name='Value' ordinal='1' />
+            <column datatype='string' name='Group' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[combined_metrics.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¤&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Metric</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Metric]</local-name>
+            <parent-name>[combined_metrics.csv]</parent-name>
+            <remote-alias>Metric</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[combined_metrics.csv_AC1B4EAA4BC94160893D8BB718A44548]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Value</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Value]</local-name>
+            <parent-name>[combined_metrics.csv]</parent-name>
+            <remote-alias>Value</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[combined_metrics.csv_AC1B4EAA4BC94160893D8BB718A44548]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Group</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Group]</local-name>
+            <parent-name>[combined_metrics.csv]</parent-name>
+            <remote-alias>Group</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[combined_metrics.csv_AC1B4EAA4BC94160893D8BB718A44548]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[Group]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Metric]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;Completion Rate&quot;' value='Completion Rate ' />
+        </aliases>
+      </column>
+      <column caption='combined_metrics.csv' datatype='table' name='[__tableau_internal_object_id__].[combined_metrics.csv_AC1B4EAA4BC94160893D8BB718A44548]' role='measure' type='quantitative' />
+      <column-instance column='[Group]' derivation='Max' name='[max:Group:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Group]' derivation='Min' name='[min:Group:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Group]' derivation='None' name='[none:Group:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/cr/41xbbwl92z1_z8mm61y7_jm80000gn/T/tableau-temp/#TableauTemp_0ls7jqb1a3i6w218faywr05gcxqu.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='05/04/2025 02:10:41 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Metric</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Metric]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Metric</remote-alias>
+              <ordinal>0</ordinal>
+              <family>combined_metrics.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[combined_metrics.csv_AC1B4EAA4BC94160893D8BB718A44548]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Value</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Value]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Value</remote-alias>
+              <ordinal>1</ordinal>
+              <family>combined_metrics.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[combined_metrics.csv_AC1B4EAA4BC94160893D8BB718A44548]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Group</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Group]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Group</remote-alias>
+              <ordinal>2</ordinal>
+              <family>combined_metrics.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[combined_metrics.csv_AC1B4EAA4BC94160893D8BB718A44548]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[max:Group:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Control&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Test&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[min:Group:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Control&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Test&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Group:nk]' type='palette'>
+            <map to='#76b7b2'>
+              <bucket>&quot;Control&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Test&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='combined_metrics.csv' id='combined_metrics.csv_AC1B4EAA4BC94160893D8BB718A44548'>
+            <properties context=''>
+              <relation connection='textscan.0mfe4l004lyfl314w13rb1oodm5m' name='combined_metrics.csv' table='[combined_metrics#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+                  <column datatype='string' name='Metric' ordinal='0' />
+                  <column datatype='real' name='Value' ordinal='1' />
+                  <column datatype='string' name='Group' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontsize='19'>Completion Rate</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='combined_metrics' name='federated.0f3niba1lrys951h1j3hh020pvuv' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0f3niba1lrys951h1j3hh020pvuv'>
+            <column datatype='string' name='[Group]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Metric]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;Completion Rate&quot;' value='Completion Rate ' />
+              </aliases>
+            </column>
+            <column datatype='real' name='[Value]' role='measure' type='quantitative' />
+            <column-instance column='[Group]' derivation='Min' name='[min:Group:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Group]' derivation='None' name='[none:Group:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Metric]' derivation='None' name='[none:Metric:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Value]' derivation='Sum' name='[sum:Value:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.0f3niba1lrys951h1j3hh020pvuv].[none:Group:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Control&quot;</bucket>
+              <bucket>&quot;Test&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.0f3niba1lrys951h1j3hh020pvuv].[none:Metric:nk]'>
+            <groupfilter function='member' level='[none:Metric:nk]' member='&quot;Completion Rate&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0f3niba1lrys951h1j3hh020pvuv].[none:Metric:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='tick-color' scope='rows' value='#ffffff' />
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-color' scope='rows' value='#ffffff' />
+            <format attr='stroke-color' scope='cols' value='#000000' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='tick-color' scope='cols' value='#00000000' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0f3niba1lrys951h1j3hh020pvuv].[none:Group:nk]' value='271' />
+            <format attr='width' field='[federated.0f3niba1lrys951h1j3hh020pvuv].[min:Group:nk]' value='285' />
+            <format attr='text-format' field='[federated.0f3niba1lrys951h1j3hh020pvuv].[sum:Value:qk]' value='p0%' />
+            <format attr='text-align' data-class='subtotal' scope='rows' value='auto' />
+            <format attr='font-weight' value='bold' />
+            <format attr='font-weight' data-class='subtotal' value='bold' />
+            <format attr='font-weight' data-class='total' value='bold' />
+            <format attr='font-size' value='19' />
+            <format attr='font-size' data-class='subtotal' value='19' />
+            <format attr='font-size' field='[federated.0f3niba1lrys951h1j3hh020pvuv].[sum:Value:qk]' value='19' />
+            <format attr='font-family' data-class='subtotal' scope='rows' value='Arial' />
+            <format attr='color' data-class='subtotal' scope='rows' value='#000000' />
+            <format attr='font-family' data-class='subtotal' scope='cols' value='Arial' />
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='height' field='[federated.0f3niba1lrys951h1j3hh020pvuv].[none:Metric:nk]' value='52' />
+            <format attr='font-weight' data-class='subtotal' value='normal' />
+            <format attr='font-weight' data-class='total' value='normal' />
+            <format attr='font-size' data-class='subtotal' value='19' />
+            <format attr='font-size' data-class='total' scope='rows' value='28' />
+            <format attr='font-size' data-class='total' scope='cols' value='19' />
+            <format attr='background-color' value='#d4d4d4' />
+            <format attr='background-color' data-class='subtotal' value='#000000' />
+            <format attr='background-color' scope='rows' value='#d4d4d4' />
+            <format attr='band-color' scope='rows' value='#ffffff' />
+            <format attr='border-color' value='#000000' />
+            <format attr='border-width' value='0' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' data-class='subtotal' value='0' />
+            <format attr='border-style' data-class='subtotal' value='none' />
+            <format attr='border-width' data-class='total' value='1' />
+            <format attr='border-style' data-class='total' value='solid' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-family' scope='rows' value='Arial' />
+            <format attr='font-weight' value='normal' />
+            <format attr='text-align' value='auto' />
+            <format attr='vertical-align' value='center' />
+            <format attr='wrap' value='on' />
+            <format attr='font-size' value='9' />
+            <format attr='font-size' scope='cols' value='19' />
+            <format attr='font-size' scope='rows' value='12' />
+            <format attr='color' scope='cols' value='#000000' />
+            <format attr='color' scope='rows' value='#000000' />
+            <format attr='font-family' scope='cols' value='Arial' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='band-color' scope='rows' value='#000000' />
+            <format attr='background-color' value='#d4d4d4' />
+            <format attr='background-color' data-class='subtotal' value='#000000' />
+            <format attr='background-color' data-class='total' value='#000000' />
+            <format attr='background-color' data-class='subtotal' scope='rows' value='#000000' />
+            <format attr='border-color' value='#000000' />
+            <format attr='border-width' value='0' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' data-class='subtotal' value='1' />
+            <format attr='border-style' data-class='subtotal' value='solid' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='omit-on-special' field='[federated.0f3niba1lrys951h1j3hh020pvuv].[sum:Value:qk]' value='true' />
+            <format attr='break-on-special' field='[federated.0f3niba1lrys951h1j3hh020pvuv].[sum:Value:qk]' value='true' />
+            <format attr='show-null-value-warning' field='[federated.0f3niba1lrys951h1j3hh020pvuv].[sum:Value:qk]' value='true' />
+            <format attr='background-color' value='#d4d4d4' />
+            <format attr='band-size' scope='rows' value='1' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+            <format attr='font-weight' value='normal' />
+            <format attr='font-size' value='9' />
+            <format attr='color' value='#000000' />
+            <format attr='font-family' value='Arial' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-color' scope='rows' value='#000000' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-color' scope='rows' value='#0000004b' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-color' scope='rows' value='#ffffff' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+            <format attr='stroke-color' scope='cols' value='#000000' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-color' scope='rows' value='#ffffff' />
+            <format attr='stroke-size' scope='rows' value='1' />
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-color' scope='rows' value='#000000' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='font-weight' value='normal' />
+            <format attr='font-family' value='Arial' />
+            <format attr='color' value='#000000' />
+          </style-rule>
+          <style-rule element='tooltip'>
+            <format attr='font-size' value='19' />
+            <format attr='font-family' value='Arial' />
+            <format attr='color' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0f3niba1lrys951h1j3hh020pvuv].[none:Group:nk]' />
+              <text column='[federated.0f3niba1lrys951h1j3hh020pvuv].[sum:Value:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0f3niba1lrys951h1j3hh020pvuv].[sum:Value:qk]</rows>
+        <cols>[federated.0f3niba1lrys951h1j3hh020pvuv].[min:Group:nk]</cols>
+      </table>
+      <simple-id uuid='{2F059B52-8E0F-4E0E-A0AC-9494FB50359D}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0f3niba1lrys951h1j3hh020pvuv].[none:Group:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0f3niba1lrys951h1j3hh020pvuv].[none:Group:nk]</field>
+            <field>[federated.0f3niba1lrys951h1j3hh020pvuv].[none:Metric:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{F779DE95-098C-43B1-BB83-6EE7CD4652F6}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+      qJoEQKiaBEComgRAqJoEQKiaBECoWsDNcMeOHeOtt97CarUCcOPGDfbv34/dbqe0tJSDBw+G
+      pFAhQmHMk+JHRkaIjIzEYrGQnZ2NVqvF5XKFpFghgm1Mk+JhdDU4vV6PTqfD4/Hg8/nQ6/XS
+      DSrCwpgmxVdWVgKjA7K/8Y1v0NPTQ0ZGBlqtVrpBRVgY06T41atXA5Cfnw/Atm3bgleZEONA
+      rgIJVZMACFWTAAhVkwAIVZMACFWTAAhVkwAIVZMACFWTAAhVC7gZ7sSJE5SWljI4OAjAiRMn
+      eOedd+jr66OkpISysrKQFCpEKIxpUrzb7aa7u5u1a9fyl7/8ha6uLnQ63V0rRwsxmY1pUryi
+      KP4/RqOR4uJiurq6sNvt0g0qwsKYJsV/+eWXmM1mLly4wMqVK6moqGD69OlER0dLN6gIC2Oa
+      FJ+Xl+c/3NFoNOzdu9f/uRDhYMyT4u/cll98EW7kMqhQNQmAUDUJgFA1CYBQNQmAULWAA9DS
+      0sK5c+fwer0ANDc3c+7cOXw+H5cuXfJPjxQiHPxPvUAOh4N///vfeL1eTp06hcPh4PTp01gs
+      Fs6cOSNjUkXYCDgAERERZGZmYrVacbvdREVFMXv2bOrq6pg5cyZxcXG43e5Q1StEUAXcCjEy
+      MsLnn3/OrFmzqKurY3h4mM8++4yCggIuX77MwMAARqMxVPUKEVQBt0I8//zzOBwOEhISSE5O
+      JisrC7vdTmJiIpmZmf4lE4UIBxpFUZSmpiacTmfwnlSjwWQyodPpGBkZ+a9+psvlxKOo99wh
+      KdKAURsR1Oc0DDSidQ8G9TnDiWdaOiPGpId+T0gCIES4CLgZLpwoikJPTw9RUVFMmzYtKM/p
+      8/nweDxyqMfov6/dbr/rBiij0YhOFz6/VlP2jTCr1cr3vvc9SkpKePXVV3nvvff+qzvVSktL
+      6e/vf+DXm5ubefPNN4NZatgaHh7ml7/8JS+99BLbt2/npz/9KVevXn3oz/T29k6qISrhE9UA
+      HTlyhPXr1/Pss8/icrk4fPgwHo+H8vJyrl+/zqpVq1i5ciUff/wxHR0dxMfHs3HjRk6ePElc
+      XBw6nY4bN26wbt06amtraW9vZ/369SQlPfyYUk1iYmL4+c9/TlVVFX//+9/54Q9/iM/no7y8
+      nKtXr7Jq1Sry8/MpKyujtbWVdevW0d7eTkVFBU8++SRpaWkT/RKm7h6gsbGR3NxcNBoNRqOR
+      F154gS+//JKGhgZeeOEFPvzwQ5qamigvL2fXrl1cu3YNq9VKZmYmq1evpqKigsWLF1NbW4vT
+      6WT37t389re/9S8GIO7vypUr/POf/2Tv3r18/PHH/Otf/+Ls2bNs374di8XCggULyMrKwmw2
+      T3SpwBQOQEJCAp2dncB/Zptdu3aNpUuXkpSUxNy5c2lvbyczM5OUlBTS0tL8456io6PRaDSs
+      WbOGvr4+li9fziOPPEJSUhIDAwMT/MomN4vF4p8bZzKZiIuLo6CggJ/97Gdcu3YNnU5HZGTk
+      pLlffMoGYPPmzfzud7+jsrKSw4cPc/78eRYvXsyZM2e4cuUKtbW1ZGZmotFo/t+dbPX19f7H
+      H330UY4fP05VVRV9fX0kJCRM0CsKDwsWLCAuLo6tW7cyPDyMzWajpqaGl156CYvFgtfrpa2t
+      7aHnWeMpYt++ffv6+/v/6+v14cJsNpOVlUV1dTUJCQkUFxeTlpZGUlISdXV17Nq1i/T0dOLj
+      40lLS8NkMpGamkpWVhbd3d0sW7aMjIwMZs2ahU6n4+bNm3znO98hOTmZxMREUlJSJvolThp6
+      vZ4ZM2ZgNpv9/zbV1dV861vfIicnB5PJRH19PTt37mTu3Ln4fD4SExOJi4ub6NL5P1Qmoi7A
+      qNmiAAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
