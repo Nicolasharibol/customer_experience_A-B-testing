@@ -1,4 +1,4 @@
-📈 Vanguard Completion Rate Analysis: UI Design Experiment
+📈 Completion Rate Analysis: UI Design Experiment at Vanguard 
 
 Welcome to the Vanguard Completion Rate Analysis project. This initiative focuses on assessing the impact of a new UI design through a structured A/B testing framework, with the goal of enhancing user engagement and achieving cost-effective improvements.
 
