@@ -35,8 +35,8 @@ Data Preparation: Ensure access to experiment data. Set up the necessary Python 
 
 Analysis Execution: Use the provided scripts to run statistical tests and generate visualizations illustrating completion rate enhancements.
 
-Thank you for exploring the insights of this project. Should you have any questions or wish to discuss further, please feel free to reach out.🌟📊 
-
 For accessing the large dataset used in this project, please download it from the following link:
 - [df_final_web_data_pt_1.csv] (https://drive.google.com/file/d/17Wy5EVg621ecVBhqhQipWXlPB1MExcUv/view?usp=sharing)
 - [df_final_web_data_pt_2.csv] (https://drive.google.com/file/d/1C3j2m541gD4xcugJIziEbNNg2QWWtiFk/view?usp=sharing)
+
+🌟📊 Thank you for exploring the insights of this project. Should you have any questions or wish to discuss further, please feel free to reach out.
